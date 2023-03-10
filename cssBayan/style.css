@@ -42,17 +42,23 @@
 .item__meme {
     margin-left: auto;
     margin-right: auto;
+    max-width: 0px;
+    width: 100%;
+    height: auto;
+    transition: max-width 1s ease-out;
+}
+
+.item:hover .item__meme,
+.item:focus .item__meme {
     max-width: 700px;
     margin-bottom: 10px;
-    display: none;
+    transition: max-width 1s ease-in;
 }
 
-.item:hover .item__meme {
-    display: block;
-}
-
-.item:focus .item__meme {
-    display: block;
+.item:focus .item__cross,
+.item:hover .item__cross {
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
 }
 
 :focus-visible {
